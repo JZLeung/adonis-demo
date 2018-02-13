@@ -1,5 +1,27 @@
-@layout('layout.layout')
+@layout('admin.layout.layout')
 
 @section('content')
-Admin Index.page
+{{--  Admin Index.page  --}}
+
+<div class="columns has-text-centered">
+    <div class="column">
+        <div class=" notification">
+            <h3 class="title has-text-dark">总用户数</h3>
+            <span class="has-text-success has-text-weight-bold is-size-1"> {{users.length}} </span>
+        </div>
+    </div>
+    <div class="column">
+        <div class="notification">
+            <h3 class="title has-text-dark">总博文数</h3>
+            <span class="has-text-warning has-text-weight-bold is-size-1"> {{blogs.length}} </span>
+        </div>
+    </div>
+    <div class="column">
+        <div class="notification">
+            <h3 class="title has-text-dark">新用户数</h3>
+            <span class="has-text-info has-text-weight-bold is-size-1"> {{newUsers.length}} </span>
+        </div>
+    </div>
+</div>
+
 @endsection

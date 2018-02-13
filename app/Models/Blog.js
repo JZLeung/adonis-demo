@@ -1,8 +1,9 @@
 'use strict'
 
-const Model = use('Model')
+// const Model = use('Model')
+const BaseModel = use('./Base')
 
-class Blog extends Model {
+class Blog extends BaseModel {
     static get primaryKey() {
         return 'id'
     }

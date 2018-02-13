@@ -1,0 +1,17 @@
+
+<div class="container is-widescreen level">
+    <div class="level-left">
+        {{--  <a class="button is-text" href="./">Blog Admin</a>  --}}
+        {{--  <a class="button is-text">MainPage</a>  --}}
+        {{--  <a class="button is-text">Help</a>  --}}
+    </div>
+    <div class="level-right">
+        {{--  ddd  --}}
+        @loggedIn
+            <h2> Hello {{auth.user.username}}</h2>
+            <a href="{{ route('admin.logout') }}">Logout</a>
+        @else
+            <a href="{{ route('admin.login') }}">Login</a>
+        @endloggedIn
+    </div>
+</div>

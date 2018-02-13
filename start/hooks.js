@@ -6,4 +6,8 @@ hooks.after.providersBooted(() => {
     View.global('currentTime', function () {
         return new Date().getTime()
     })
+
+    View.global('json', obj => {
+        return JSON.stringify(obj)
+    })
 })

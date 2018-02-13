@@ -1,8 +1,10 @@
 'use strict'
 
-const Model = use('Model')
+// const Model = use('Model')
+const BaseModel = use('./Base')
 
-class User extends Model {
+
+class User extends BaseModel {
     static boot() {
         super.boot()
 

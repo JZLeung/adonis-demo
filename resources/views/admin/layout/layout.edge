@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="纯净，安全的玩家闲置物品交易平台。 ,数字尾巴">
+    <meta name="keywords" content="">
+    <title>{{title}}</title>
+    {{ cspMeta() }}
+    {{ css('https://cdn.bootcss.com/bulma/0.6.2/css/bulma.min.css') }}
+    {{ script('https://use.fontawesome.com/releases/v5.0.0/js/all.js', 'defer')}}
+</head>
+<body>
+    <header class="header navbar">
+        @include('admin.layout.header')
+    </header>
+
+    <section class="section is-light">
+        <div class="container ">
+            <div class="columns">
+                <div class="sidebar column is-one-quarter">
+                    @include('admin.layout.sidebar')
+                </div>
+                <div class="content column">
+                    @!section('content') 
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
