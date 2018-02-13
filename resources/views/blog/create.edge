@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello Adonis</title>
+    {{ cspMeta() }}
+    {{ css('style') }}
+</head>
+<body>
+    <section>
+        <div class="logo"></div>
+        <div class="title"></div>
+        
+        <a href="{{ route('BlogController.show', { id: 1 }) }}">View profile</a>
+        @loggedIn
+        <h2> You are logged in </h2>
+        @else
+        <p> <a href="/login">Click here</a> to login </p>
+        @endloggedIn
+    </section>
+</body>
+</html>
