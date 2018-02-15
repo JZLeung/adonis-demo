@@ -1,0 +1,22 @@
+
+@if(item.children)
+<ul class="menu-list">
+    <p class="menu-label">
+        {{item.title}}
+    </p>
+    {{--  <li><a href="javascript:;" class="menu-title">{{item.title}}</a></li>  --}}
+    {{--  <li>  --}}
+        <ul class="menu-list">
+        @!each(item in item.children, include = 'admin.layout.sideitem')
+        </ul>
+    {{--  </li>  --}}
+</ul>
+@else
+<li>
+    @if(route(item.router) == url)
+    <a href="{{route(item.router)}}" class="is-active">{{item.title}}</a>
+    @else
+    <a href="{{route(item.router)}}">{{item.title}}</a>
+    @endif
+</li>
+@endif

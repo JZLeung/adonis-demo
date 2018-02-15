@@ -1,14 +1,5 @@
 <aside class="menu">
-    <p class="menu-label">
-        General
-    </p>
-    <ul class="menu-list">
-        <li><a class="is-active">首页</a></li>
-    </ul>
-    <p class="menu-label">
-        Administration
-    </p>
-    <ul class="menu-list">
-        <li><a>博文管理</a></li>
-    </ul>
+    {{--  @each(menu in request.menus)  --}}
+    @!each(item in request.menus, include = 'admin.layout.sideitem')
+    {{--  @endeach  --}}
 </aside>

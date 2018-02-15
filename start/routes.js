@@ -62,9 +62,12 @@ Route.group(() => {
     
 }).prefix('admin')
 
-Route.group(() => {
-    // Route.resource('blog', 'BlogController')
+Route.group('admin', () => {
+    // Route.get('/blog', 'Admin/BlogController.index')
+    Route.resource('blog', 'Admin/BlogController')
     // Route.on('/').render('admin.index').as('admin.index')
     Route.get('/', 'Admin/IndexController.index').as('admin.index')
     // Route.
 }).prefix('admin').middleware(['adminAuth'])
+
+// console.log(Route)

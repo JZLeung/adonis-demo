@@ -10,4 +10,8 @@ hooks.after.providersBooted(() => {
     View.global('json', obj => {
         return JSON.stringify(obj)
     })
+
+    View.global('adminMenu', router => {
+        
+    })
 })
